@@ -5,7 +5,7 @@ Roy Andhika Satria, [satriaroy70@gmail.com](mailto:satriaroy70@gmail.com).
 Sebuah proyek machine learning yang menggunakan algoritma klasifikasi untuk memprediksi apakah sebuah jamur beracun atau tidak.
 
 ## Dataset
-Data bersumber dari [Kaggle](https://www.kaggle.com/datasets/uciml/mushroom-classification).
+Data bersumber dari [Kaggle](https://www.kaggle.com/datasets/uciml/mushroom-classification).  
 Data berisi informasi mengenai daftar jenis jamur yang aslinya berasal dari **UCI Machine Learning repository** hampir 30 tahun yang lalu. *Shrooming* (mushroom hunting) sempat menjadi populer pada masa itu. Dataset ini memiliki sampel dari 23 spesies jamur, dan tiap spesies diidentifikasi sebagai *edible* atau *poisonous*.
 
 ## Tujuan
@@ -61,9 +61,9 @@ Dataset yang ada meliputi `8124` pengamatan dengan `22` fitur dan 1 label (`Clas
 ![graph](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/output.png)
 1. Jamur yang bisa dimakan, 80% memiliki **odor = n** atau tidak berbau.
 2. Hampir keseluruhan data memiliki fitur **gill-attachment = f** baik edible maupun poisonous, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
-3. Jamur beracun 97% memiliki **gill-spacing = c**.
-4. Jamur beracun 44% memiliki **gill-color = b** atau kuning ke-krem-an, sedangkan jamur yang bisa dimakan tidak memiliki warna ini sehingga dapat dipastikan jika menemukan jamur dengan gill-color = b pasti beracun.
-5. veil-color mayoritas data memiliki warna putih, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
+3. Jamur beracun **97%** memiliki **gill-spacing = c**.
+4. Jamur beracun **44%** memiliki **gill-color = b** atau kuning ke-krem-an, sedangkan jamur yang bisa dimakan tidak memiliki warna ini sehingga dapat dipastikan jika menemukan jamur dengan **gill-color = b pasti beracun**.
+5. **veil-color** mayoritas data memiliki warna putih, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
 
 ### 3. Preprocessing
 | Target |	Persentase	| 
@@ -71,7 +71,7 @@ Dataset yang ada meliputi `8124` pengamatan dengan `22` fitur dan 1 label (`Clas
 | Edible	| 51.79% |	
 | Poisonous	| 48.21%	| 
 
-Data target sudah cukup seimbang, tidak perlu dilakukan balancing
+Data target sudah cukup seimbang, tidak perlu dilakukan balancing  
 Kemudian data kategorikal semuanya diubah ke dalam bentuk 1 dan 0 menggunakan One-hot-encoding
 
 ### 4. Base Model / Benchmarking
