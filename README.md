@@ -58,7 +58,7 @@ Dataset yang ada meliputi `8124` pengamatan dengan `22` fitur dan 1 label (`Clas
 4. Perbandingan data target e & p sudah seimbang
 
 ### 2. Ringkasan Exploratory Data Analysis (EDA)
-![graph](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/output.jpg)
+![graph](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/output.png)
 1. Jamur yang bisa dimakan, 80% memiliki **odor = n** atau tidak berbau.
 2. Hampir keseluruhan data memiliki fitur **gill-attachment = f** baik edible maupun poisonous, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
 3. Jamur beracun **97%** memiliki **gill-spacing = c**.
