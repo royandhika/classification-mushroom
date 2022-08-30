@@ -95,8 +95,8 @@ Berdasarkan hasil confusion matrix dan waktu processing, kita dapati bahwa 3 per
 ### 5. Learning Curve
 Learning curve menggunakan 10 fold validation  
 1. Decision Tree  
-![graph6](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val-tree.png)
+![graph6](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val_tree.png)
 2. KNN  
-![graph7](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val-knn.png)
+![graph7](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val_knn.png)
 3. Logistic Regression  
-![graph7](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val-log.png)
+![graph7](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val_log.png)
