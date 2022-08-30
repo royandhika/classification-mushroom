@@ -58,16 +58,16 @@ Dataset yang ada meliputi `8124` pengamatan dengan `22` fitur dan 1 label (`Clas
 4. Perbandingan data target e & p sudah seimbang
 
 ### 2. Ringkasan Exploratory Data Analysis (EDA)
-![graph2](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/odor.png)
 1. Jamur yang bisa dimakan, 80% memiliki **odor = n** atau tidak berbau.
-![graph1](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-attachment.png)
+![graph2](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/odor.png)
 2. Hampir keseluruhan data memiliki fitur **gill-attachment = f** baik edible maupun poisonous, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
-![graph3](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-spacing.png)
+![graph1](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-attachment.png)
 3. Jamur beracun **97%** memiliki **gill-spacing = c**.
-![graph4](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-color.png)
+![graph3](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-spacing.png)
 4. Jamur beracun **44%** memiliki **gill-color = b** atau kuning ke-krem-an, sedangkan jamur yang bisa dimakan tidak memiliki warna ini sehingga dapat dipastikan jika menemukan jamur dengan **gill-color = b pasti beracun**.
-![graph5](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/veil-color.png)
+![graph4](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-color.png)
 5. **veil-color** mayoritas data memiliki warna putih, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
+![graph5](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/veil-color.png)
 
 ### 3. Preprocessing
 | Target |	Persentase	| 
