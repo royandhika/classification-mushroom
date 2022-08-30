@@ -58,15 +58,15 @@ Dataset yang ada meliputi `8124` pengamatan dengan `22` fitur dan 1 label (`Clas
 4. Perbandingan data target e & p sudah seimbang
 
 ### 2. Ringkasan Exploratory Data Analysis (EDA)
-1. Jamur yang bisa dimakan, 80% memiliki **odor = n** atau tidak berbau.
+1. Jamur yang bisa dimakan, 80% memiliki **odor = n** atau tidak berbau.  
 ![graph2](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/odor.png)
-2. Hampir keseluruhan data memiliki fitur **gill-attachment = f** baik edible maupun poisonous, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
+2. Hampir keseluruhan data memiliki fitur **gill-attachment = f** baik edible maupun poisonous, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.  
 ![graph1](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-attachment.png)
-3. Jamur beracun **97%** memiliki **gill-spacing = c**.
+3. Jamur beracun **97%** memiliki **gill-spacing = c**.  
 ![graph3](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-spacing.png)
-4. Jamur beracun **44%** memiliki **gill-color = b** atau kuning ke-krem-an, sedangkan jamur yang bisa dimakan tidak memiliki warna ini sehingga dapat dipastikan jika menemukan jamur dengan **gill-color = b pasti beracun**.
+4. Jamur beracun **44%** memiliki **gill-color = b** atau kuning ke-krem-an, sedangkan jamur yang bisa dimakan tidak memiliki warna ini sehingga dapat dipastikan jika menemukan jamur dengan **gill-color = b pasti beracun**.  
 ![graph4](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/gill-color.png)
-5. **veil-color** mayoritas data memiliki warna putih, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.
+5. **veil-color** mayoritas data memiliki warna putih, fitur kurang relevan dan dipertimbangkan untuk menghapus fitur ini.  
 ![graph5](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/veil-color.png)
 
 ### 3. Preprocessing
@@ -79,15 +79,24 @@ Data target sudah cukup seimbang, tidak perlu dilakukan balancing
 Kemudian data kategorikal semuanya diubah ke dalam bentuk 1 dan 0 menggunakan One-hot-encoding
 
 ### 4. Base Model / Benchmarking
-Menggunakan single testing dan kemudian divalidasi ulang menggunakan stratifiedKFold dengan k = 5. Scoring yang digunakan adalah 'f1-score'.
+Menggunakan single testing dan kemudian divalidasi ulang menggunakan stratifiedKFold dengan k = 10. Scoring yang digunakan adalah 'f1-score'.
 
 | Model | F1 score | 5-fold validation (mean) | Waktu |
 |:-:|:-:|:-:|:-:|
-| Logistic Regression | 1.00 | 0.999 | 0.5s |
-| Categorical Naive Bayes | 0.93 | 0.937 | 0.4s |
-| Decision Tree | 1.00 | 1.00 | 0.4s |
+| Logistic Regression | 1.00 | 1.00 | 0.9s |
+| Categorical Naive Bayes | 0.94 | 0.939 | 0.7s |
+| Decision Tree | 1.00 | 1.00 | 0.6s |
 | K Nearest Neighbor | 1.00 | 1.00 | 1.3s |
-| Random Forest | 1.00 | 1.00 | 1.6s |
-| Support Vector Classification | 1.00 | 1.00 | 4.8s |
+| Random Forest | 1.00 | 1.00 | 3.2s |
+| Support Vector Classification | 1.00 | 1.00 | 8.8s |
 
-Berdasarkan hasil confusion matrix dan waktu processing, kita dapati bahwa performa terbaik terdapat dalam model Decision Tree Classifier. 
+Berdasarkan hasil confusion matrix dan waktu processing, kita dapati bahwa 3 performa teratas adalah Decision Tree, KNN, dan Logistic Regression. 
+
+### 5. Learning Curve
+Learning curve menggunakan 10 fold validation  
+1. Decision Tree  
+![graph6](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val-tree.png)
+2. KNN  
+![graph7](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val-knn.png)
+3. Logistic Regression  
+![graph7](https://raw.githubusercontent.com/royandhika/classification-mushroom/main/assets/val-log.png)
