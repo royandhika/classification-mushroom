@@ -81,7 +81,7 @@ Kemudian data kategorikal semuanya diubah ke dalam bentuk 1 dan 0 menggunakan On
 ### 4. Base Model / Benchmarking
 Menggunakan single testing dan kemudian divalidasi ulang menggunakan stratifiedKFold dengan k = 10. Scoring yang digunakan adalah 'f1-score'.
 
-| Model | F1 score | 5-fold validation (mean) | Waktu |
+| Model | F1 score | 10-fold validation (mean) | Waktu |
 |:-:|:-:|:-:|:-:|
 | Logistic Regression | 1.00 | 1.00 | 0.9s |
 | Categorical Naive Bayes | 0.94 | 0.939 | 0.7s |
